@@ -1,6 +1,12 @@
 const dom = {
-    selectbox: document.getElementById( elementId: 'selectbox');
-    rooms: document.getElementById('rooms')
-}
+  selectbox: document.getElementById('selectbox'),
+  rooms: document.getElementById('rooms'),
+};
 
-console.log( data[0]: dom)
+console.log(dom);
+
+//  Выпадающий список
+
+dom.selectbox.querySelector('.selectbox__selected').onclick = (event) => {
+  dom.selectbox.classList.toggle('open');
+};

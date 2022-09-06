@@ -86,7 +86,7 @@ body {
 }
 .selectbox__selected {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     font-size: 18px;
     font-weight: 500;
     background-color: #fff;
@@ -103,13 +103,14 @@ body {
 .selectbox__list {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -8px;
+    right: -8px;
+    z-index: 1;
     max-height: 0;
     overflow: hidden;
     background-color: #fff; 
     border-radius: 3px; 
-    padding: 4px 0; 
+    padding: 8px 12px; 
     transition: all 0.3s ease-in-out;
 }
 .selectbox__item {
