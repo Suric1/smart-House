@@ -1,2 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+@import url('/fonts/icons/style.css');
+
+:root {
+    --gradient: linear-gradient(to right, #a894e6, #7e77ee);
+    --grey: #f0f0f0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #e0e5eb;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.mobile {
+    width: 350px;
+    height: 700px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-rows: 48px 1fr 62px;
+
+}
+
+.mobile__top, .mobile__bottom {
+    align-self: center;
+    justify-self: center;
+}
+
+.mobile__content {
+    background-color: #fff;
+}
+
+
+
+
+.rooms {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+}
+.room {
+    display: grid;
+    grid-template-rows: 130px 30px;
+    align-content: center;
+    font-size: 16px;
+    text-align: center;
+    background: var(--grey);
+    border-radius: 12px;
+    cursor: pointer;
+}
+.room.selected {
+    background: var(--gradient);
+    color: white;
+}
+.room.selected i {
+    align-self: center;
+    font-size: 5em;
+    opacity: 1;
+}
+.room i {
+    align-self: center;
+    font-size: 5em;
+    opacity: 0.7;
+}
+
+
+
+/* UI  Components */
+
+
+.selectbox {
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.selectbox__selected {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.ic_arrow {
+    font-size: 0.7em;
+    margin-left: 10px;
+}
+.selectbox.open .selectbox__list {
+    top: 120%;
+   max-height: 200px;
+}
+.selectbox__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff; 
+    border-radius: 3px; 
+    padding: 4px 0; 
+    transition: all 0.3s ease-in-out;
+}
+.selectbox__item {
+    cursor: pointer;
+}
+
+.selectbox__item.selected, .selectbox__item:hover {
+    color:#7e77ee;
+    font-weight: 600;
+}
+.selectbox__item:not(:last-child) {
+margin-bottom: 4px;
+}
+
+
+
+
 
