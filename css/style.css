@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
-@import '/fonts/icons/style.css';
+@import url(./../fonts/icons/fonts.css);
 
 :root {
     --gradient: linear-gradient(to right, #a894e6, #7e77ee);
@@ -80,7 +80,7 @@ body {
 
 
 .selectbox {
-    width: max-content;
+    width: 143px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 25px;
@@ -95,6 +95,9 @@ body {
     position: relative;
     z-index: 2;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     background-color: #fff;
 }

@@ -11,7 +11,7 @@
 <body>
 
 <div class="mobile">
-    <div class="mobile__top"><img src="/img/top.svg"></div>
+    <div class="mobile__top"><img src="/img/top.svg" alt="header"></div>
 
     <div class="mobile__content">
         <div id="selectbox" class="selectbox">
@@ -29,35 +29,36 @@
                 <div data-room="washingroom" class="selectbox__item">Уборная</div>
             </div>
         </div>
-        <div class="rooms">
-            <div data-rooms="livingroom" class="room selected">
+        <div id="rooms" class="rooms">
+            <div data-room="livingroom" class="room">
                 <i class="ic_livingroom"></i>
                 <span>Зал</span>
             </div>
-            <div data-rooms="bedroom" class="room">
+            <div data-room="bedroom" class="room">
                 <i class="ic_bedroom"></i>
                 <span>Спальня</span>
             </div>
-            <div data-rooms="kitchen" class="room">
+            <div data-room="kitchen" class="room">
                 <i class="ic_kitchen"></i>
                 <span>Кухня</span>
             </div>
-            <div data-rooms="bathroom" class="room">
+            <div data-room="bathroom" class="room">
                 <i class="ic_bathroom"></i>
                 <span>Ванная</span>
             </div>
-            <div data-rooms="studio" class="room">
+            <div data-room="studio" class="room">
                 <i class="ic_studio"></i>
                 <span>Кабинет</span>
             </div>
-            <div data-rooms="washingroom" class="room">
+            <div data-room="washingroom" class="room">
                 <i class="ic_washingroom"></i>
                 <span>Уборная</span>
             </div>
         </div>
     </div>
 
-    <div class="mobile__bottom"><img src="/img/bottom.svg"></div>
+    <div class="mobile__bottom"><img src="/img/bottom.svg" alt="footer"></div>
+
 </div>
 
 <script src="/js/script.js"></script>
