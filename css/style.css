@@ -40,7 +40,9 @@ body {
 
 .rooms {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20px;
     justify-content: center;
     align-items: center;
     gap: 14px;
@@ -75,6 +77,78 @@ body {
     opacity: 0.7;
 }
 
+/*SETTING*/
+/*Страница настроек*/
+.settings {
+    padding: 0 20px;
+}
+
+.settings__tabs {
+    display: grid;
+    grid-template: 94px / repeat(3, 1fr);
+    gap: 14px;
+}
+
+.option {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-content: center;
+    font-size: 12px;
+    text-align: center;
+    background: var(--grey);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background: var(--gradient);
+    color: white;
+}
+
+.option.selected i {
+    align-self: center;
+    font-size: 3em;
+    opacity: 1;
+}
+
+.option i {
+    align-self: center;
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+
+.settings__screen-title {
+    text-align: center;
+    margin: 30px 0 15px;
+    font-weight: 300;
+}
+
+
+/*Кнопка регулеровки температуры*/
+
+.temperature-button {
+    width: 240px;
+    margin: 0 auto;
+}
+
+.dots-box {
+
+}
+
+.dots, .bg_line {
+    fill: transparent;
+    stroke: var(--grey);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 0 21;
+}
+
+.bg_line {
+    stroke-width: 1px;
+    stroke-dasharray: 283 283;
+}
+
 
 /* UI  Components */
 
@@ -83,7 +157,6 @@ body {
     width: 143px;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 25px;
     cursor: pointer;
 }
 
@@ -141,6 +214,7 @@ body {
 .selectbox__item:not(:last-child) {
     margin-bottom: 4px;
 }
+
 
 
 

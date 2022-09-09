@@ -54,6 +54,9 @@ function selectRoom(room) {
 	if (room !== 'all') {
 		const newSelectedRoom = dom.rooms.querySelector(`[data-room=${room}]`)
 		newSelectedRoom.classList.add('selected')
+		renderScreen(false)
+	} else {
+		renderScreen(true)
 	}
 	const selectedSelectboxRoom = dom.selectbox.querySelector('.selectbox__item.selected')
 	selectedSelectboxRoom.classList.remove('selected')
@@ -71,3 +74,17 @@ dom.rooms.querySelectorAll('.room').forEach(room => {
 		selectRoom(value)
 	}
 })
+
+
+// Отображение нужного экрана
+
+
+function renderScreen(isRooms) {
+	setTimeout(() => {
+		if (isRooms) {
+			dom.rooms.style.display = 'grid'
+		} else {
+			dom.rooms.style.display = 'none'
+		}
+	}, 300)
+}
