@@ -129,26 +129,71 @@ body {
 
 .temperature-button {
     width: 240px;
+    height: 240px;
     margin: 0 auto;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    position: relative;
+}
+
+.temperature-button__info {
+
 }
 
 .dots-box {
-
+    transform: rotate(5deg);
+    transform-origin: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.dots, .bg_line {
+.dots, .line, .line-active, .round, .separate-lines, .separate-dots {
     fill: transparent;
     stroke: var(--grey);
     stroke-width: 3px;
     stroke-linecap: round;
     stroke-dasharray: 0 21;
+    transition: all 0.2s ease-in-out;
 }
 
-.bg_line {
+.line, .line-active, .round {
     stroke-width: 1px;
-    stroke-dasharray: 283 283;
+    stroke-dasharray: 286 286;
+    transform: rotate(48deg);
+    transform-origin: center;
 }
 
+.line-active {
+    stroke: black;
+    stroke-dasharray: 57 286;
+}
+
+.round {
+    stroke-width: 6px;
+    stroke-dasharray: 0 285;
+    transform: rotate(48deg);
+}
+
+
+.separate-lines, .separate-dots {
+    stroke: white;
+    transform: rotate(60deg);
+    transform-origin: center;
+}
+
+.separate-dots {
+    stroke-dasharray: 40 313;
+}
+
+.separate-lines {
+    transform: rotate(49deg);
+    stroke-dasharray: 55 286;
+}
 
 /* UI  Components */
 
