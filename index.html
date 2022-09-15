@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<div id="settings" class="settings">
-			<div class="settings__tabs">
+			<div id="settings-tabs" class="settings__tabs">
 				<div data-type="temperature" class="option selected">
 					<i class="ic_temperature"></i>
 					<span>Температура</span>
@@ -69,11 +69,11 @@
 					<i class="ic_humidity"></i>
 					<span>Влажность</span>
 				</div>
-				<div class="settings__screens">
+				<div id="settings-panel" class="settings__screens">
 
 				</div>
 			</div>
-			<div data-type="temperature" class="settings__screen">
+			<div data-type="temperature" class="settings__screen active">
 				<div class="settings__screen-title">Температура</div>
 				<div class="temperature-button">
 					<svg class="dots-box" viewBox="0 0 103 103">
@@ -89,13 +89,39 @@
 						<span>C</span>
 					</div>
 				</div>
+				<div class="power">
+					<i class="ic_power"></i>
+				</div>
+				<div class="power-label">Нажмите, чтобы выключить</div>
+				<div class="set-button">Установить температуру</div>
 			</div>
-			<div data-type="light" class="settings__screen"></div>
+			<div data-type="light" class="settings__screen">
+				<div class="setting__screen-title">Интенсивность</div>
+				<div class="setting__screen-icon">
+					<i class="ic_sun"></i>
+				</div>
+				<div class="slider">
+					<div class="slider__progress">45%</div>
+				</div>
+				<div class="switch">
+					<div></div>
+				</div>
+			</div>
+			<div data-type="light" class="settings__screen">
+				<div class="setting__screen-title">Интенсивность</div>
+				<div class="setting__screen-icon">
+					<i class="ic_humidity">
+				</div>
+				<div class="slider">
+					<div class="slider__progress">45%</div>
+				</div>
+				<div class="switch">
+					<div></div>
+				</div>
+			</div>
 			<div data-type="humidity" class="settings__screen"></div>
 		</div>
 	</div>
-
-	.sfaf*5
 
 
 	<div class="mobile__bottom"><img src="/img/bottom.svg" alt="footer"></div>

@@ -40,7 +40,6 @@ body {
 
 .rooms {
     display: grid;
-    display: none;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 20px;
     justify-content: center;
@@ -80,6 +79,7 @@ body {
 /*SETTING*/
 /*Страница настроек*/
 .settings {
+    display: none;
     padding: 0 20px;
 }
 
@@ -117,6 +117,14 @@ body {
     opacity: 0.7;
 }
 
+/*Экраны настроек*/
+.settings__screen {
+    display: none;
+}
+
+.settings__screen.active {
+    display: block;
+}
 
 .settings__screen-title {
     text-align: center;
@@ -124,6 +132,13 @@ body {
     font-weight: 300;
 }
 
+.setting__screen-icon {
+    text-align: center;
+    font-size: 30px;
+    color: #666;
+    margin-bottom: 15px;
+
+}
 
 /*Кнопка регулеровки температуры*/
 
@@ -140,7 +155,28 @@ body {
 }
 
 .temperature-button__info {
+    position: relative;
+    font-size: 32px;
+    width: 70%;
+    height: 70%;
+    border-radius: 70%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.temperature-button__info:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 100px;
+    opacity: 0.3;
+    border: 1px solid #000;
 }
 
 .dots-box {
@@ -194,6 +230,89 @@ body {
     transform: rotate(49deg);
     stroke-dasharray: 55 286;
 }
+
+/*Power*/
+.power {
+    background: var(--gradient);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    font-size: 24px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 2px;
+    margin: 0 auto;
+}
+
+.power-label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.set-button {
+    background: var(--gradient);
+    color: white;
+    width: 250px;
+    margin: 15px auto 0;
+    border-radius: 100px;
+    text-align: center;
+    padding: 16px;
+}
+
+/*Slider*/
+
+.slider {
+    width: 100px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: var(--grey);
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient);
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+    min-width: 30px;
+    height: 45%;
+    margin-top: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+/*Switch*/
+.switch {
+    width: 60px;
+    height: 28px;
+    border-radius: 60px;
+    background: var(--grey);
+    margin: 30px auto;
+    position: relative;
+}
+
+.switch div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    background: var(--gradient);
+    transition: var(--transition);
+}
+
 
 /* UI  Components */
 
