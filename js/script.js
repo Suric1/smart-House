@@ -4,8 +4,12 @@ const dom = {
 	rooms: document.getElementById('rooms'),
 	settings: document.getElementById('settings'),
 	settingsTabs: document.getElementById('settings-tabs'),
-	settingsPanel: document.getElementById('settings-panel')
-};
+	settingsPanel: document.getElementById('settings-panel'),
+	temperatureLine: document.getElementById('temperature-line'),
+	temperatureRound: document.getElementById('temperature-round'),
+	temperature: document.getElementById('temperature'),
+	temperatureBtn: document.getElementById('temperature-btn')
+}
 
 //  Выпадающий список
 
@@ -96,7 +100,71 @@ function renderScreen(isRooms) {
 
 // Панель Настроек Комнаты
 
+const settingsData = {
+	all: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+	livingroom: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+	bedroom: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+	kitchen: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0,
+	},
+	bathroom: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+	studio: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+	washingroom: {
+		temperature: 0,
+		lights: 0,
+		humidity: 0
+	},
+}
 
+// Отрисовка температуры
+function renderTemperature() {
+	const min = 16
+	const max = 40
+	const range = max - min
+	const percent = range / 100
+	const lineMin = 54
+	const lineMax = 276
+	const lineRange = lineMax - lineMin
+	const linePercent = lineRange / 100
+	const roundMin = -240
+	const roundMax = 48
+	const roundRange = roundMax - roundMin
+	const roundPercent = roundRange / 100
+	
+	
+	if (temperature >= min && temperature <= max) {
+		const finishPercent = Math.round((temperature - min) / percent)
+		const lineFinishPercent = linePercent * finishPercent
+		const roundFinishPercent = roundPercent * finishPercent
+		dom.temperatureLine.style.strokeDasharray = `${lineFinishPercent} 276`
+		dom.temperatureLine.style.transform = `rotate${roundFinishPercent} deg`
+		dom.temperature.innerText = temperature
+	}
+}
 
+renderTemperature(30)
 
+// Изменение температуры
 
